@@ -1,0 +1,434 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2F19F0CE273A5EFA00634D29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F19F0CD273A5EFA00634D29 /* AppDelegate.swift */; };
+		2F19F0D0273A5EFA00634D29 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F19F0CF273A5EFA00634D29 /* SceneDelegate.swift */; };
+		2F19F0D7273A5EFE00634D29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F19F0D6273A5EFE00634D29 /* Assets.xcassets */; };
+		2F19F0DA273A5EFE00634D29 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F19F0D8273A5EFE00634D29 /* LaunchScreen.storyboard */; };
+		2F19F0E3273A603400634D29 /* GhibliViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F19F0E2273A603400634D29 /* GhibliViewController.swift */; };
+		2F19F0E5273A606000634D29 /* GhibliViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F19F0E4273A606000634D29 /* GhibliViewController.storyboard */; };
+		2F19F0E7273A611300634D29 /* GhibliInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F19F0E6273A611300634D29 /* GhibliInteractor.swift */; };
+		2F19F0E9273A612000634D29 /* GhibliPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F19F0E8273A612000634D29 /* GhibliPresenter.swift */; };
+		2F19F0EB273A612E00634D29 /* GhibliRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F19F0EA273A612E00634D29 /* GhibliRouter.swift */; };
+		2F19F0ED273A614B00634D29 /* GhibliEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F19F0EC273A614B00634D29 /* GhibliEntity.swift */; };
+		2F19F0F1273A618500634D29 /* GhibliCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F19F0EF273A618500634D29 /* GhibliCell.swift */; };
+		2F19F0F2273A618500634D29 /* GhibliCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F19F0F0273A618500634D29 /* GhibliCell.xib */; };
+		2F19F0F5273A69FC00634D29 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F19F0F4273A69FC00634D29 /* NetworkService.swift */; };
+		2F19F0F7273A70BB00634D29 /* DataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F19F0F6273A70BB00634D29 /* DataFetcher.swift */; };
+		2F19F0F9273A73EE00634D29 /* Extension+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F19F0F8273A73ED00634D29 /* Extension+UIViewController.swift */; };
+		2F593E5F2745DC6F00580FEE /* GhibliBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F593E5E2745DC6F00580FEE /* GhibliBuilder.swift */; };
+		2F593E612745E88600580FEE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F593E602745E88600580FEE /* DetailViewController.swift */; };
+		2FF5FB0B2749DF3000FFC2AC /* Extension+UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF5FB0A2749DF3000FFC2AC /* Extension+UIImageView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2F19F0CA273A5EFA00634D29 /* Ghibli-VIPER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ghibli-VIPER.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F19F0CD273A5EFA00634D29 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2F19F0CF273A5EFA00634D29 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		2F19F0D6273A5EFE00634D29 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2F19F0D9273A5EFE00634D29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2F19F0DB273A5EFE00634D29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F19F0E2273A603400634D29 /* GhibliViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GhibliViewController.swift; sourceTree = "<group>"; };
+		2F19F0E4273A606000634D29 /* GhibliViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GhibliViewController.storyboard; sourceTree = "<group>"; };
+		2F19F0E6273A611300634D29 /* GhibliInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GhibliInteractor.swift; sourceTree = "<group>"; };
+		2F19F0E8273A612000634D29 /* GhibliPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GhibliPresenter.swift; sourceTree = "<group>"; };
+		2F19F0EA273A612E00634D29 /* GhibliRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GhibliRouter.swift; sourceTree = "<group>"; };
+		2F19F0EC273A614B00634D29 /* GhibliEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GhibliEntity.swift; sourceTree = "<group>"; };
+		2F19F0EF273A618500634D29 /* GhibliCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GhibliCell.swift; sourceTree = "<group>"; };
+		2F19F0F0273A618500634D29 /* GhibliCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GhibliCell.xib; sourceTree = "<group>"; };
+		2F19F0F4273A69FC00634D29 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		2F19F0F6273A70BB00634D29 /* DataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetcher.swift; sourceTree = "<group>"; };
+		2F19F0F8273A73ED00634D29 /* Extension+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIViewController.swift"; sourceTree = "<group>"; };
+		2F593E5E2745DC6F00580FEE /* GhibliBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GhibliBuilder.swift; sourceTree = "<group>"; };
+		2F593E602745E88600580FEE /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		2FF5FB0A2749DF3000FFC2AC /* Extension+UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIImageView.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2F19F0C7273A5EFA00634D29 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2F19F0C1273A5EFA00634D29 = {
+			isa = PBXGroup;
+			children = (
+				2F19F0CC273A5EFA00634D29 /* Ghibli-VIPER-Starter */,
+				2F19F0CB273A5EFA00634D29 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2F19F0CB273A5EFA00634D29 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2F19F0CA273A5EFA00634D29 /* Ghibli-VIPER.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2F19F0CC273A5EFA00634D29 /* Ghibli-VIPER-Starter */ = {
+			isa = PBXGroup;
+			children = (
+				2F19F0F3273A68CE00634D29 /* Services */,
+				2F19F0E1273A601800634D29 /* Ghibli VIPER */,
+				2FF5FB032749C4F200FFC2AC /* Detail VC */,
+				2F19F0CD273A5EFA00634D29 /* AppDelegate.swift */,
+				2F19F0CF273A5EFA00634D29 /* SceneDelegate.swift */,
+				2F19F0F8273A73ED00634D29 /* Extension+UIViewController.swift */,
+				2FF5FB0A2749DF3000FFC2AC /* Extension+UIImageView.swift */,
+				2F19F0D6273A5EFE00634D29 /* Assets.xcassets */,
+				2F19F0D8273A5EFE00634D29 /* LaunchScreen.storyboard */,
+				2F19F0DB273A5EFE00634D29 /* Info.plist */,
+			);
+			name = "Ghibli-VIPER-Starter";
+			path = "Ghibli-VIPER";
+			sourceTree = "<group>";
+		};
+		2F19F0E1273A601800634D29 /* Ghibli VIPER */ = {
+			isa = PBXGroup;
+			children = (
+				2F19F0EE273A616200634D29 /* Cells */,
+				2F19F0E2273A603400634D29 /* GhibliViewController.swift */,
+				2F19F0E4273A606000634D29 /* GhibliViewController.storyboard */,
+				2F19F0E6273A611300634D29 /* GhibliInteractor.swift */,
+				2F19F0E8273A612000634D29 /* GhibliPresenter.swift */,
+				2F19F0EA273A612E00634D29 /* GhibliRouter.swift */,
+				2F19F0EC273A614B00634D29 /* GhibliEntity.swift */,
+				2F593E5E2745DC6F00580FEE /* GhibliBuilder.swift */,
+			);
+			path = "Ghibli VIPER";
+			sourceTree = "<group>";
+		};
+		2F19F0EE273A616200634D29 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				2F19F0EF273A618500634D29 /* GhibliCell.swift */,
+				2F19F0F0273A618500634D29 /* GhibliCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		2F19F0F3273A68CE00634D29 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2F19F0F4273A69FC00634D29 /* NetworkService.swift */,
+				2F19F0F6273A70BB00634D29 /* DataFetcher.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		2FF5FB032749C4F200FFC2AC /* Detail VC */ = {
+			isa = PBXGroup;
+			children = (
+				2F593E602745E88600580FEE /* DetailViewController.swift */,
+			);
+			path = "Detail VC";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2F19F0C9273A5EFA00634D29 /* Ghibli-VIPER */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2F19F0DE273A5EFE00634D29 /* Build configuration list for PBXNativeTarget "Ghibli-VIPER" */;
+			buildPhases = (
+				2F19F0C6273A5EFA00634D29 /* Sources */,
+				2F19F0C7273A5EFA00634D29 /* Frameworks */,
+				2F19F0C8273A5EFA00634D29 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Ghibli-VIPER";
+			productName = "Ghibli-VIPER-Starter";
+			productReference = 2F19F0CA273A5EFA00634D29 /* Ghibli-VIPER.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2F19F0C2273A5EFA00634D29 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					2F19F0C9273A5EFA00634D29 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+				};
+			};
+			buildConfigurationList = 2F19F0C5273A5EFA00634D29 /* Build configuration list for PBXProject "Ghibli-VIPER" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2F19F0C1273A5EFA00634D29;
+			productRefGroup = 2F19F0CB273A5EFA00634D29 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2F19F0C9273A5EFA00634D29 /* Ghibli-VIPER */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2F19F0C8273A5EFA00634D29 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F19F0DA273A5EFE00634D29 /* LaunchScreen.storyboard in Resources */,
+				2F19F0D7273A5EFE00634D29 /* Assets.xcassets in Resources */,
+				2F19F0F2273A618500634D29 /* GhibliCell.xib in Resources */,
+				2F19F0E5273A606000634D29 /* GhibliViewController.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2F19F0C6273A5EFA00634D29 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F593E612745E88600580FEE /* DetailViewController.swift in Sources */,
+				2F19F0CE273A5EFA00634D29 /* AppDelegate.swift in Sources */,
+				2F19F0E3273A603400634D29 /* GhibliViewController.swift in Sources */,
+				2F19F0F1273A618500634D29 /* GhibliCell.swift in Sources */,
+				2F19F0ED273A614B00634D29 /* GhibliEntity.swift in Sources */,
+				2F19F0F5273A69FC00634D29 /* NetworkService.swift in Sources */,
+				2F19F0F7273A70BB00634D29 /* DataFetcher.swift in Sources */,
+				2F19F0D0273A5EFA00634D29 /* SceneDelegate.swift in Sources */,
+				2FF5FB0B2749DF3000FFC2AC /* Extension+UIImageView.swift in Sources */,
+				2F19F0EB273A612E00634D29 /* GhibliRouter.swift in Sources */,
+				2F593E5F2745DC6F00580FEE /* GhibliBuilder.swift in Sources */,
+				2F19F0F9273A73EE00634D29 /* Extension+UIViewController.swift in Sources */,
+				2F19F0E9273A612000634D29 /* GhibliPresenter.swift in Sources */,
+				2F19F0E7273A611300634D29 /* GhibliInteractor.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2F19F0D8273A5EFE00634D29 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2F19F0D9273A5EFE00634D29 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2F19F0DC273A5EFE00634D29 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2F19F0DD273A5EFE00634D29 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2F19F0DF273A5EFE00634D29 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Ghibli-VIPER/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ferry.Ghibli-VIPER";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		2F19F0E0273A5EFE00634D29 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Ghibli-VIPER/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ferry.Ghibli-VIPER";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2F19F0C5273A5EFA00634D29 /* Build configuration list for PBXProject "Ghibli-VIPER" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F19F0DC273A5EFE00634D29 /* Debug */,
+				2F19F0DD273A5EFE00634D29 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2F19F0DE273A5EFE00634D29 /* Build configuration list for PBXNativeTarget "Ghibli-VIPER" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F19F0DF273A5EFE00634D29 /* Debug */,
+				2F19F0E0273A5EFE00634D29 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2F19F0C2273A5EFA00634D29 /* Project object */;
+}
