@@ -7,15 +7,20 @@
 
 import Foundation
 
-protocol GhibliPresenterProtocol: AnyObject {
+protocol GhibliPresenterInput: AnyObject {
     func fetchMovies()
-    func didSelect(_ movie: GhibliViewModel.Cell)
-    
-    func presentMovie(data: [Film])
-    func presentError(message: String)
+    func numberOfRowsInSection() -> Int
+    func viewModel(at indexPath: IndexPath) -> GhibliViewModel.Cell
+    func pushMovie(at indexPath: IndexPath)
 }
 
-class GhibliPresenter: GhibliPresenterProtocol {
+protocol GhibliPresenterOutput: AnyObject {
+    func presentMovie(data: GhibliViewModel)
+    func presentError(message: String)
+    func presentToDetail(_ movie: GhibliViewModel.Cell)
+}
+
+class GhibliPresenter: GhibliPresenterInput {
     weak var view: GhibliViewProtocol!
     var interactor: GhibliInteractorProtocol!
     var router: GhibliRouterProtocol!
@@ -24,24 +29,30 @@ class GhibliPresenter: GhibliPresenterProtocol {
         interactor.getGhibliData()
     }
     
-    func presentMovie(data: [Film]) {
-        let movieItems = data.map { ghibliViewModel(from: $0) }
-        let ghibliItemViewModel = GhibliViewModel(cells: movieItems)
-        
-        view.displayMovies(viewModel: ghibliItemViewModel)
+    func numberOfRowsInSection() -> Int {
+        interactor.numberOfSection()
+    }
+    
+    func viewModel(at indexPath: IndexPath) -> GhibliViewModel.Cell {
+        interactor.cellViewModel(at: indexPath)
+    }
+    
+    func pushMovie(at indexPath: IndexPath) {
+        interactor.didSelectMovie(at: indexPath)
+    }
+}
+
+extension GhibliPresenter: GhibliPresenterOutput {
+    
+    func presentMovie(data: GhibliViewModel) {
+        view.reloadMovie()
     }
     
     func presentError(message: String) {
         view.displayError(message: message)
     }
     
-    func didSelect(_ movie: GhibliViewModel.Cell) {
+    func presentToDetail(_ movie: GhibliViewModel.Cell) {
         router.pushToDetail(movie: movie)
-    }
-}
-
-extension GhibliPresenter {
-    private func ghibliViewModel(from movieItem: Film) -> GhibliViewModel.Cell {
-        return GhibliViewModel.Cell(imageName: movieItem.image, movieTitle: movieItem.title, releaseDate: movieItem.releaseDate, description: movieItem.description)
     }
 }

@@ -8,15 +8,13 @@
 import UIKit
 
 protocol GhibliViewProtocol: AnyObject {
-    func displayMovies(viewModel: GhibliViewModel)
+    func reloadMovie()
     func displayError(message: String)
 }
 
 class GhibliViewController: UIViewController {
     
-    var filmViewModels = GhibliViewModel(cells: [])
-    
-    var presenter: GhibliPresenterProtocol!
+    var presenter: GhibliPresenterInput!
 
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
@@ -26,6 +24,7 @@ class GhibliViewController: UIViewController {
     }
 }
 
+// MARK: - Setup
 private extension GhibliViewController {
     func initialize() {
         view.backgroundColor = .systemBackground
@@ -43,9 +42,9 @@ private extension GhibliViewController {
     }
 }
 
+// MARK: - View Protocol
 extension GhibliViewController: GhibliViewProtocol {
-    func displayMovies(viewModel: GhibliViewModel) {
-        self.filmViewModels = viewModel
+    func reloadMovie() {
         tableView.reloadData()
     }
     
@@ -54,14 +53,15 @@ extension GhibliViewController: GhibliViewProtocol {
     }
 }
 
+// MARK: - UITableView DataSource and Delegate
 extension GhibliViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return filmViewModels.cells.count
+        return presenter.numberOfRowsInSection()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: GhibliCell.cellID, for: indexPath) as! GhibliCell
-        let viewModel = filmViewModels.cells[indexPath.row]
+        let viewModel = presenter.viewModel(at: indexPath)
         
         cell.set(viewModel: viewModel)
         return cell
@@ -72,8 +72,7 @@ extension GhibliViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let movie = filmViewModels.cells[indexPath.row]
-        presenter.didSelect(movie)
+        presenter.pushMovie(at: indexPath)
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
